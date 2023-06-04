@@ -1,6 +1,8 @@
 import time
+
+import numpy as np
 from numba import njit
-import numpy as np 
+
 
 @njit
 def find_max(a, b):
@@ -29,5 +31,7 @@ for i in range(10):
     t2 = (t1 - t0) * 1000
     print(f'Time taken: {t2} milliseconds')
     arr = np.append(arr, t2)
+print(f'Array List: {arr}')
+print(f'Average of the array: {np.average(arr)}')
 print(f'Array List: {arr}')
 print(f'Average of the array: {np.average(arr)}')
